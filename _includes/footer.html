@@ -1,1 +1,12 @@
-This is the footer. Include anything you'd like here, like a link to an <a class="internal-link" href="{{ site.baseurl }}/about">About</a> page.
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="copyright">
+            <p>&copy; {{ site.time | date: '%Y' }} Digital Garden. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+            <a href="{{ '/about' | relative_url }}">About</a>
+            <a href="{{ '/contact' | relative_url }}">Contact</a>
+            <a href="{{ '/privacy' | relative_url }}">Privacy</a>
+        </div>
+    </div>
+</footer>

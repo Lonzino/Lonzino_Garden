@@ -1,0 +1,24 @@
+<header class="site-header">
+    <div class="header-content">
+        <div class="logo">
+            <a href="{{ '/' | relative_url }}">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Digital Garden Logo" class="pixel-art">
+            </a>
+        </div>
+        
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="{{ '/inventory' | relative_url }}" class="nav-item">Inventory</a></li>
+                <li><a href="{{ '/map' | relative_url }}" class="nav-item">Map</a></li>
+                <li><a href="{{ '/journal' | relative_url }}" class="nav-item">Journal</a></li>
+                <li><a href="{{ '/career' | relative_url }}" class="nav-item">Career</a></li>
+            </ul>
+        </nav>
+
+        <div class="theme-toggle">
+            <button id="theme-toggle" class="pixel-button">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </div>
+</header> 

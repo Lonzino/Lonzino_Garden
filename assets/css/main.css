@@ -1,0 +1,234 @@
+:root {
+    /* Light theme variables */
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #0066cc;
+    --secondary-color: #f5f5f5;
+    --warning-color: #ff6b6b;
+    --success-color: #51cf66;
+    
+    /* Dark theme variables */
+    --dark-bg-color: #1a1a1a;
+    --dark-text-color: #e0e0e0;
+    --dark-accent-color: #66b3ff;
+    --dark-secondary-color: #2d2d2d;
+    --dark-warning-color: #ff8787;
+    --dark-success-color: #69db7c;
+}
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+}
+
+/* Layout */
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Header */
+.site-header {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 40px;
+    image-rendering: pixelated;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.nav-item:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.status-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stat-bar {
+    flex: 1;
+    height: 8px;
+    background-color: var(--bg-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.stat-fill {
+    height: 100%;
+    background-color: var(--accent-color);
+    transition: width 0.3s;
+}
+
+/* Main content */
+.main-content {
+    padding: 2rem;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Social buttons */
+.social-buttons {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.social-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    transition: transform 0.3s;
+}
+
+.social-button:hover {
+    transform: scale(1.1);
+}
+
+.pixel-icon {
+    width: 24px;
+    height: 24px;
+    image-rendering: pixelated;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        display: none;
+    }
+    
+    .nav-list {
+        display: none;
+    }
+    
+    .social-buttons {
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
+
+/* Pixel art styles */
+.pixel-art {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.pixel-button {
+    background: none;
+    border: 2px solid var(--text-color);
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.pixel-button:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.pixel-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid var(--text-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Fira Code', monospace;
+} 

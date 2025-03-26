@@ -1,0 +1,39 @@
+<div class="status-bar">
+    <div class="tag-stats">
+        <h3>Status</h3>
+        <div class="stat-item">
+            <span class="stat-label">HP</span>
+            <div class="stat-bar">
+                <div class="stat-fill" style="width: 80%"></div>
+            </div>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">MP</span>
+            <div class="stat-bar">
+                <div class="stat-fill" style="width: 60%"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="folder-tree">
+        <h3>Inventory</h3>
+        <ul class="tree-list">
+            <li><a href="{{ '/notes' | relative_url }}">Notes</a></li>
+            <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
+            <li><a href="{{ '/skills' | relative_url }}">Skills</a></li>
+        </ul>
+    </div>
+
+    <div class="recent-history">
+        <h3>Recent History</h3>
+        <ul class="history-list">
+            {% for note in site.notes limit:5 %}
+            <li><a href="{{ note.url | relative_url }}">{{ note.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search..." class="pixel-input">
+    </div>
+</div> 
